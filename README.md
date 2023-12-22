@@ -1,0 +1,2 @@
+Attack - space
+Movement - WASD
