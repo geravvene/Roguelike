@@ -1,0 +1,114 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+}
+
+.field {
+  position: relative;
+  border: 2px solid #d0d0d0;
+  margin: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-size: 100%;
+  background-image: image-set(
+    '../public/static/images/png/tile-.png' type('image/png')
+  );
+  background-repeat: repeat;
+}
+
+.tile {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tile.player {
+  animation: breathing 4s linear infinite;
+}
+
+.tile.enemy {
+  animation: vibing 4s linear infinite;
+}
+
+.tile.wall {
+  background-image: image-set(
+    '../public/static/images/png/tile-W.png' type('image/png')
+  );
+}
+
+.tile.enemy.human.left {
+  background-image: image-set(
+    '../public/static/images/png/tile-E-L.png' type('image/png')
+  );
+}
+
+.tile.enemy.human.right {
+  background-image: image-set(
+    '../public/static/images/png/tile-E-R.png' type('image/png')
+  );
+}
+
+.tile.player.right {
+  background-image: image-set(
+    '../public/static/images/png/tile-P-R.png' type('image/png')
+  );
+}
+
+.tile.player.left {
+  background-image: image-set(
+    '../public/static/images/png/tile-P-L.png' type('image/png')
+  );
+}
+
+.tile.potion {
+  background-image: image-set(
+    '../public/static/images/png/tile-HP.png' type('image/png')
+  );
+  background-size: 65%;
+  animation: pulse 2s linear infinite;
+}
+
+.tile.sword {
+  background-image: image-set(
+    '../public/static/images/png/tile-SW.png' type('image/png')
+  );
+  background-size: 90%;
+  animation: pulse 4s linear infinite;
+}
+
+.health {
+  height: 3px;
+}
+
+.player .health {
+  background-color: #00ff00;
+}
+
+.enemy .health {
+  background-color: #ff0000;
+}
+
+.healthPoint {
+  visibility: hidden;
+  width: 100%;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #cdcdcd;
+  text-shadow: 1px 0 0px #000000, 0 1px 0px #000000, -1px 0 0px #000000,
+    0 -1px 0px #000000;
+  user-select: none;
+  position: absolute;
+  top: -12px;
+}
+
+.player:hover .healthPoint,
+.enemy:hover .healthPoint {
+  visibility: visible;
+}
