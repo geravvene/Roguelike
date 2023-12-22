@@ -1,2 +1,3 @@
-Attack - space
+Attack - SPACE
+
 Movement - WASD
