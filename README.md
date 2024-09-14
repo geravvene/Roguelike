@@ -5,4 +5,5 @@
 менеджмент здоровья и урона. Написан на чистым JS5.
 
 Attack - SPACE
+
 Movement - WASD
